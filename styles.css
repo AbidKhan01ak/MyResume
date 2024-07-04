@@ -1,0 +1,233 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  --line-height: 1.6;
+  --bg-color: #bed7dc;
+  --text-color: #092635;
+  --header-bg: url(assets/header-BG.svg);
+  --profile-image-bg: url(assets/myImage.jpg);
+  --border-radius: 10px;
+  --padding: 1rem;
+  --margin: 0;
+  --header-padding: 1rem 0;
+  --section-margin-bottom: 2rem;
+  --section-padding: 2rem;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --skill-gap: 0.8rem;
+  --btoon-bg-color: #092635;
+  --btoon-hover-bg-color: #064157;
+  --btoon-color: #fff;
+  --btoon-padding: 1rem 2rem;
+  --footer-bg-color: #092635;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  margin: var(--margin);
+  padding: var(--margin);
+  background-color: var(--bg-color);
+  position: relative;
+  cursor: default;
+}
+
+header {
+  background: var(--header-bg) no-repeat center center / cover;
+  background-attachment: fixed;
+  color: var(--text-color);
+  padding: var(--header-padding);
+  text-align: center;
+  border-radius: var(--border-radius);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-header .profile-image {
+  width: 150px;
+  height: 150px;
+  background: var(--profile-image-bg) no-repeat center center / cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  animation: zoomIn 2s ease-in-out;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+h1 {
+  margin: var(--margin);
+  font-size: 4rem;
+}
+
+h2 {
+  margin: 0.5rem 0;
+}
+
+h3 {
+  font-weight: 800;
+  font-style: italic;
+}
+
+p {
+  font-weight: 600;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main {
+  padding: var(--section-padding);
+}
+
+section {
+  margin-bottom: var(--section-margin-bottom);
+}
+
+section p {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+section h2 {
+  background-color: var(--text-color);
+  color: #fff;
+  border-radius: 20px;
+  margin: 0 -1.5rem 1rem;
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+.education-item,
+.experience-item,
+.project-item,
+.interests,
+.additional-info,
+.awards {
+  background: #fff;
+  padding: var(--padding);
+  margin: 21px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--skill-gap);
+}
+
+.skills div {
+  background: rgb(235, 244, 246, 1);
+
+  padding: var(--padding);
+  flex: 1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 20px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.4s ease-in-out;
+}
+
+.skills div:hover {
+  transform: scale(1.1);
+}
+
+li {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.download-resume {
+  text-align: center;
+  margin: 2rem 0 5rem 0;
+}
+
+.btoon {
+  background-color: var(--btoon-bg-color);
+  color: var(--btoon-color);
+  border: none;
+  padding: var(--btoon-padding);
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.btoon:hover {
+  background-color: var(--btoon-hover-bg-color);
+}
+
+footer {
+  background-color: var(--footer-bg-color);
+  color: #fff;
+  text-align: center;
+  padding: 0.2rem 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  section h2 {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+  }
+
+  .skills div {
+    flex: 100%;
+  }
+
+  .education-item,
+  .experience-item,
+  .project-item,
+  .interests,
+  .additional-info,
+  .awards {
+    margin: 1rem 0;
+  }
+
+  .download-resume {
+    margin: 1rem 0 4rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .profile-header .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+}
